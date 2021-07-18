@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Welcome to Dashboard</h2>
+    <p><b>Login Email</b> - <%=email %></p>
+    <form method="POST" action="/select-city">
+        <input type="text" name="city" placeholder="City" required>
+        <button type="submit">Submit</button>
+    </form>
+    <p><a href="/logout">Logout</a></p>
+</body>
+
+</html>

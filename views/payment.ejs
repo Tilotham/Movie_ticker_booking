@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment</title>
+</head>
+<body>
+    <h2>Payment</h2>
+    <% if(userData.length!=0){ var i=1; userData.forEach(function(data){ %>
+        <h4>Movie Name - <%=data.movie_name %></h4>
+        <h4>City - <%=data.city %></h4>
+        <h4>Theatre - <%=data.theatre %></h4>
+        <h4>Price - <%=data.price %></h4>
+
+        <form method="POST" action="/payment/<%=data.id %>">
+            <input type="text" name="card-no" placeholder="Credit or Debit card no." required>
+            <input type="text" name="cvv" placeholder="CVV" required>
+            <input type="text" name="expiry" placeholder="Expiry Date(mm/yyyy)" required>
+            <button type="submit">Submit</button>
+        </form>
+
+    <% i++; }) %>
+    <% } else{ %>
+        <h1></h1>
+    <% } %>
+</body>
+</html>

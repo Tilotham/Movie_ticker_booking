@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movies</title>
+</head>
+<body>
+    <h2>Movie List</h2>
+    <table border="2">
+        <tr>
+            <th>Id.</th>
+            <th>Movie Name</th>
+            <th>City</th>
+            <th>Theatre</th>
+            <th>No of Seats</th>
+            <th>Booked Number</th>
+            <th>Ticket Price</th>
+        </tr>
+        <% if(userData.length!=0){ var i=1; userData.forEach(function(data){ %>
+            <tr>
+                <td>
+                    <%=i; %>
+                </td>
+                <td>
+                    <%=data.movie_name %>
+                </td>
+                <td>
+                    <%=data.city %>
+                </td>
+                <td>
+                    <%=data.theatre %>
+                </td>
+                <td>
+                    <%=data.seats %>
+                </td>
+                <td>
+                    <%=data.bookedNum %>
+                </td>
+                <td>
+                    <%=data.price %>
+                </td>
+                <td><a href="/<%=action%>/<%=data.id%>"><%=action%></a></td>
+            </tr>
+            <% i++; }) %>
+                <% } else{ %>
+                    <tr>
+                        <td colspan="7">No Data Found</td>
+                    </tr>
+                    <% } %>
+    </table>
+</body>
+</html>

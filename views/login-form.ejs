@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div class="login-form">
+        <h3>Login Form</h3>
+        <p>
+            <%=(typeof alertMsg!='undefined' )? alertMsg:''%>
+        </p>
+        <form method="post" action="/login">
+            <input type="email" placeholder="Email Address" name="email_address" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <label>Are you an Admin ? </label>
+            <input type="radio" value="yes" name="admin" required><label>Yes</label>
+            <input type="radio" value="no" name="admin" required><label>No</label>
+            <button type="submit">Login Now</button>
+            <button><a href="/register">New Registration</a></button>
+    </div>
+    </form>
+    </div>
+</body>
+</html>

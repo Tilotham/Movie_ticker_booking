@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <div class="add-movie-form">
+        <h3>Add Movie Form</h3>
+        <p>
+            <%=(typeof alertMsg!='undefined' )? alertMsg:''%>
+        </p>
+        <form method="post" action="/add-movie">
+            <input type="text" placeholder="Movie Name" name="movie_name" required>
+            <input type="text" placeholder="City" name="city" required>
+            <input type="text" placeholder="Theatre" name="theatre" required>
+            <input type="text" placeholder="No of Seats" name="seats" required>
+            <input type="text" placeholder="Ticket Price" name="price" required>
+            <button type="submit">Register Now</button>
+        </form>
+    </div>
+</body>
+
+</html>

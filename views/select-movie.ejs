@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movies</title>
+</head>
+<body>
+    <h2>Now Showing</h2>
+    <table border="2">
+        <tr>
+            <th>Movie</th>
+        </tr>
+        <% if(userData.length!=0){ var i=1; userData.forEach(function(data){ %>
+            <tr>
+                <td>
+                    <%=data.movie_name %>
+                </td>
+                <td><a href="/select-movie/<%=city%>/<%=data.movie_name%>">Book</a></td>
+            </tr>
+            <% i++; }) %>
+                <% } else{ %>
+                    <tr>
+                        <td colspan="7">No Movies at this city</td>
+                    </tr>
+                    <% } %>
+    </table>
+</body>
+</html>
